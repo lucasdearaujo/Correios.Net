@@ -19,9 +19,9 @@ Esse endereço é retornado como um objeto Address, para facilitar o uso das inf
 
 ```c#
 
-public void buscaCep(int cep)
+public void buscaCep(string cep)
 {
-   Correios.Net.Address Address = Correios.Net.BuscaCep.GetAddress("87710-000");
+   Correios.Net.Address Address = Correios.Net.BuscaCep.GetAddress(cep);
    
    labelStreet.Text = Address.Street;
    labelCity.Text   = Address.City;
