@@ -14,26 +14,48 @@ namespace Correios.Net.Tests
     [TestClass]
     public class AddressTests
     {
+        Address Address = new Address();
+
         [TestMethod]
         [ExpectedException(typeof(InvalidArgumentException))]
-        public void TestInvalidCep()
+        public void TestSettingInvalidCep()
         {
-            Address Address = new Address();
-            Address.Cep = "8771013099";
 
-            Address Address2 = new Address();
-            Address2.Cep = "87710--130";
+            this.Address.Cep = "8771013099";
+            this.Address.Cep = "87710--130";
         }
 
         [TestMethod]
-        public void TestSettingValues()
+        public void TestSettingValidCep()
         {
             string cep = "87710-130";
+            this.Address.Cep = cep;
 
-            Address address = new Address();
-            address.Cep = cep;
+            Assert.AreEqual(this.Address.Cep, cep);
+        }
 
-            Assert.AreEqual(address.Cep, cep);
+        [TestMethod]
+        [ExpectedException(typeof(InvalidArgumentException))]
+        public void TestSettingInvalidStreet()
+        {
+            string street = "Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie." +
+                             "Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, " +
+                             "als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und diese durcheinander" +
+                             "warf um ein Musterbuch zu erstellen. Es hat nicht nur 5 Jahrhunderte überlebt, sondern" +
+                             "auch in Spruch in die elektronische Schriftbearbeitung geschafft (bemerke, nahezu unverändert)." +
+                             "Bekannt wurde es 1960, mit dem erscheinen von \"Letraset\", welches Passagen von Lorem Ipsum" +
+                             "enhielt, so wie Desktop Software wie \"Aldus PageMaker\" - ebenfalls mit Lorem Ipsum.";
+
+            this.Address.Street = street;
+        }
+
+        [TestMethod]
+        public void TestSettingValidStreet()
+        {
+            string expected = "Avenida Euclides da Cunha";
+            this.Address.Street = expected;
+
+            Assert.AreEqual(this.Address.Street, expected);
         }
     }
 }

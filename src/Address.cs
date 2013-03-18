@@ -52,5 +52,29 @@ namespace Correios.Net
                 this._Cep = value;
             }
         }
+
+        /// <summary>
+        /// A validação do endereço verifica apenas se o mesmo
+        /// tem um número de caracteres maior do que 500.
+        /// </summary>
+        /// 
+        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
+        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+        public String Street
+        {
+            get
+            {
+                return this._Street;
+            }
+            set
+            {
+                if (value.Length > 500)
+                    throw new InvalidArgumentException("O tamanho do endereço não pode exceder 500 caracteres.");
+
+                this._Street = value;
+            }
+        }
+
+
     }
 }
