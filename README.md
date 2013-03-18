@@ -6,3 +6,19 @@ Um dos pontos que levou ao desenvolvimento dessa biblioteca foi o fato de não t
 
 ## Classes
 * [`Correios.Net.BuscaCep`](https://github.com/volkoinen/Correios.Net/wiki/Correios.Net.BuscaCep)
+
+
+## Exemplo
+
+```c#
+
+public void buscaCep(int cep)
+{
+   Correios.Net.Address Address = Correios.Net.Buscacep("87710-130").GetAddress();
+   
+   labelStreet.Text = Address.Street;
+   labelCity.Text   = Address.City;
+   labelState.Text  = Address.State;
+}
+
+```
