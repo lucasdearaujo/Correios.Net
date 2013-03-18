@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Correios.Net", "Correios.Net.csproj", "{8990B1DF-7741-477D-9419-A5B288F2D1C7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E642BD0-51CE-4629-957D-77E45738A17C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Correios.Net.Tests", "..\tests\Correios.Net.Tests\Correios.Net.Tests.csproj", "{44AE16D6-86A5-49FF-823F-9925D7B4B3C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7632BDF2-102E-4F7E-90FD-9E0A99C54C96}"
+	ProjectSection(SolutionItems) = preProject
+		Correios.Net.vsmdi = Correios.Net.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -18,6 +25,10 @@ Global
 		{8990B1DF-7741-477D-9419-A5B288F2D1C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8990B1DF-7741-477D-9419-A5B288F2D1C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8990B1DF-7741-477D-9419-A5B288F2D1C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44AE16D6-86A5-49FF-823F-9925D7B4B3C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AE16D6-86A5-49FF-823F-9925D7B4B3C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AE16D6-86A5-49FF-823F-9925D7B4B3C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AE16D6-86A5-49FF-823F-9925D7B4B3C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
