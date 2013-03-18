@@ -1,4 +1,6 @@
 # Correios.Net
+`em desenvolvimento`
+
 
 A Correios.NET é uma biblioteca desenvolvida buscando fornecer ao desenvolvedor uma fácil integração das funcionalidades disponibilizadas no site dos correios ao seu site, de modo que fique tudo centralizado em um único sistema, melhorando, é claro, a experiência do usuário que vier a fazer o uso do mesmo.
 
