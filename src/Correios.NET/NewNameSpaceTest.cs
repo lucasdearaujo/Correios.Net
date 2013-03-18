@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Correios.NET
+namespace Correios.Net
 {
-    class Teste
+    class NewNameSpaceTest
     {
     }
 }
