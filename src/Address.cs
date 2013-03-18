@@ -69,9 +69,30 @@ namespace Correios.Net
             set
             {
                 if (value.Length > 500)
-                    throw new InvalidArgumentException("O tamanho do endereço não pode exceder 500 caracteres.");
+                    throw new InvalidArgumentException("O tamanho da rua não pode exceder 500 caracteres.");
 
                 this._Street = value;
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// 
+        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
+        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+        public String City
+        {
+            get
+            {
+                return this._City;
+            }
+            set
+            {
+                if (value.Length > 500)
+                    throw new InvalidArgumentException("O tamanho da cidade não pode exceder 500 caracteres.");
+
+                this._City = value;
             }
         }
 
