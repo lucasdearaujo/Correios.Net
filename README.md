@@ -10,7 +10,8 @@ Um dos pontos que levou ao desenvolvimento dessa biblioteca foi o fato de não t
 
 ## Exemplo
 
-Veja abaixo um simple exemplo aonde obtemos o endereço do cep `87710-000` chamando o método estático GetAddress da classe BuscaCep.
+Veja abaixo um simple exemplo aonde obtemos o endereço do cep 87710-000 chamando o método estático GetAddress da classe BuscaCep.
+Esse endereço é retornado como um objeto Address, para facilitar o uso das informações.
 
 ```c#
 
