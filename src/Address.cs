@@ -21,6 +21,14 @@ namespace Correios.Net
         private string _City;
         private string _State;
 
+        /// <summary>
+        /// A validação para o CEP permite apenas strings de
+        /// oito nove digitos com ou sem máscara, apenas seguindo
+        /// os seguintes padroes: 99999999 ou 99999-999. 
+        /// </summary>
+        /// 
+        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
+        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
         public String Cep
         {
             get
