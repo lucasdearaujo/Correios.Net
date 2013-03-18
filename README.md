@@ -7,9 +7,9 @@ A Correios.NET é uma biblioteca desenvolvida buscando fornecer ao desenvolvedor
 Um dos pontos que levou ao desenvolvimento dessa biblioteca foi o fato de não termos confiança em APIs referentes a endereços disponibilizadas por terceiros, ou então contar com bancos de dados estáticos os quais nunca sabemos em que momento irão ficar obsoletos, sem contar que com o Correios.NET esses bancos de dados de endereços muitas vezes usados serão tornados obsoletos, para um entendimento mais claro de como irá funcionar acompanhe a descrição da biblioteca abaixo.
 
 ## Classes
-* [`Correios.Net.BuscaCep`](https://github.com/volkoinen/Correios.Net/wiki/Correios.Net.BuscaCep)
-* [`Correios.Net.Address`](https://github.com/volkoinen/Correios.Net/wiki/Correios.Net.BuscaCep)
-* [`Correios.Net.Exceptions.InvalidArgumentException`](https://github.com/volkoinen/Correios.Net/wiki/Correios.Net.BuscaCep)
+* [`Correios.Net.BuscaCep`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/BuscaCep.cs)
+* [`Correios.Net.Address`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/Address.cs)
+* [`Correios.Net.Exceptions.InvalidArgumentException`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/Exceptions/InvalidArgumentException.cs)
 
 
 ## Exemplo
