@@ -10,11 +10,13 @@ Um dos pontos que levou ao desenvolvimento dessa biblioteca foi o fato de não t
 
 ## Exemplo
 
+Veja abaixo um simple exemplo aonde obtemos o endereço do cep `87710-000` chamando o método estático GetAddress da classe BuscaCep.
+
 ```c#
 
 public void buscaCep(int cep)
 {
-   Correios.Net.Address Address = Correios.Net.Buscacep("87710-130").GetAddress();
+   Correios.Net.Address Address = Correios.Net.BuscaCep.GetAddress("87710-000");
    
    labelStreet.Text = Address.Street;
    labelCity.Text   = Address.City;
