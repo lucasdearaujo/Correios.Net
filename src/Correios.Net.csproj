@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
     <Compile Include="BuscaCep.cs" />
     <Compile Include="Exceptions\InvalidArgumentException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
