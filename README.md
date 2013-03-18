@@ -6,6 +6,8 @@ Um dos pontos que levou ao desenvolvimento dessa biblioteca foi o fato de não t
 
 ## Classes
 * [`Correios.Net.BuscaCep`](https://github.com/volkoinen/Correios.Net/wiki/Correios.Net.BuscaCep)
+* [`Correios.Net.Address`](https://github.com/volkoinen/Correios.Net/wiki/Correios.Net.BuscaCep)
+* [`Correios.Net.Exceptions.InvalidArgumentException`](https://github.com/volkoinen/Correios.Net/wiki/Correios.Net.BuscaCep)
 
 
 ## Exemplo
