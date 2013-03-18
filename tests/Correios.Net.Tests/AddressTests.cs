@@ -23,6 +23,7 @@ namespace Correios.Net.Tests
 
             this.Address.Cep = "8771013099";
             this.Address.Cep = "87710--130";
+            this.Address.Cep = String.Empty;
         }
 
         [TestMethod]
