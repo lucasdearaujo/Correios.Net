@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Correios.Net", "Correios.Net.csproj", "{8990B1DF-7741-477D-9419-A5B288F2D1C7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Correios.Net.Tests", "..\tests\Correios.Net.Tests\Correios.Net.Tests.csproj", "{44AE16D6-86A5-49FF-823F-9925D7B4B3C8}"

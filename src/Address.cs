@@ -76,7 +76,8 @@ namespace Correios.Net
         }
 
         /// <summary>
-        /// 
+        /// A validação da ciade verifica apenas se o valor informado
+        /// tem um tamanho de no máximo 500 caracteres.
         /// </summary>
         /// 
         /// <see cref="http://volkoinen.github.com/Correios.Net"/>
@@ -96,6 +97,63 @@ namespace Correios.Net
             }
         }
 
+        /// <summary>
+        /// Verifica se o UF informado é
+        /// </summary>
+        ///
+        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
+        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+        public String State
+        {
+            get
+            {
+                return this._State;
+            }
+            set
+            {
+                bool validState = false;
 
+                string[] states =
+                {
+                    "AC", 
+                    "AL", 
+                    "AM", 
+                    "AP", 
+                    "BA", 
+                    "CE", 
+                    "DF", 
+                    "ES", 
+                    "GO",
+                    "MA",
+                    "MG",
+                    "MS",
+                    "MT",
+                    "PA",
+                    "PB",
+                    "PE",
+                    "PI",
+                    "PR",
+                    "RJ",
+                    "RN",
+                    "RO",
+                    "RR",
+                    "RS",
+                    "SC",
+                    "SE",
+                    "SP",
+                    "TO"
+                };
+
+                foreach (string state in states)
+                    if (value.ToUpper() == state)
+                    {
+                        validState = true;
+                        this._State = value.ToUpper();
+                    }
+
+                if (!validState)
+                    throw new InvalidArgumentException("A sigla da unidade federativa informada é inválida.");
+            }
+        }
     }
 }
