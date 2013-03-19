@@ -16,7 +16,7 @@ namespace Correios.Net.Tests.Http
             string dataToSend = "hello=oi";
             string method = "POST";
 
-            this.Request = new Correios.Net.Http.Request(url, dataToSend, method);
+            this.Request = new Correios.Net.Http.Request(url, dataToSend, method, String.Empty);
 
             Assert.AreEqual(Request.Url, url);
             Assert.AreEqual(Request.DataToSend, dataToSend);
@@ -30,7 +30,7 @@ namespace Correios.Net.Tests.Http
             string dataToSend = String.Empty;
             string method = "POST";
 
-            this.Request = new Correios.Net.Http.Request(url, dataToSend, method);
+            this.Request = new Correios.Net.Http.Request(url, dataToSend, method, String.Empty);
             Response response = this.Request.Send();
 
             Assert.AreEqual(response.Text, "teste");

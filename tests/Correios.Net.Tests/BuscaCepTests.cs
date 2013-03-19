@@ -10,7 +10,8 @@ namespace Correios.Net.Tests
         [TestMethod]
         public void TestAquisiçãoDoEndereço()
         {
-            Address address = Correios.Net.BuscaCep.GetAddress("87710130");
+            Address address = Correios.Net.BuscaCep.GetAddress("87710-130");
+            
         }
     }
 }
