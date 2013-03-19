@@ -83,5 +83,21 @@ namespace Correios.Net.Tests
 
             Assert.AreEqual(city, this.Address.City);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidArgumentException))]
+        public void TestSettingInvalidState()
+        {
+            this.Address.State = "Lucas";
+        }
+
+        [TestMethod]
+        public void TestSettingValidState()
+        {
+            string state = "PR";
+            this.Address.State = state;
+
+            Assert.AreEqual(state, this.Address.State);
+        }
     }
 }
