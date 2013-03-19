@@ -43,6 +43,8 @@
     <Compile Include="Address.cs" />
     <Compile Include="BuscaCep.cs" />
     <Compile Include="Exceptions\InvalidArgumentException.cs" />
+    <Compile Include="Http\Request.cs" />
+    <Compile Include="Http\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

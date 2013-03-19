@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="AddressTests.cs" />
     <Compile Include="Exceptions\InvalidArgumentExceptionTest.cs" />
+    <Compile Include="Http\RequestTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BuscaCepTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Correios.Net.csproj">
