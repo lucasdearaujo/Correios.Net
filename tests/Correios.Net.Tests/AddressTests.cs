@@ -74,5 +74,14 @@ namespace Correios.Net.Tests
 
             this.Address.City = city;
         }
+
+        [TestMethod]
+        public void TestSettingValidCity()
+        {
+            string city = "Paranavaí";
+            this.Address.City = city;
+
+            Assert.AreEqual(city, this.Address.City);
+        }
     }
 }
