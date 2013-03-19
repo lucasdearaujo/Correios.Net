@@ -9,6 +9,8 @@ Um dos pontos que levou ao desenvolvimento dessa biblioteca foi o fato de não t
 ## Classes
 * [`Correios.Net.BuscaCep`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/BuscaCep.cs)
 * [`Correios.Net.Address`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/Address.cs)
+* [`Correios.Net.Http.Request`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/Http/Request.cs)
+* [`Correios.Net.Http.Response`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/Http/Response.cs)
 * [`Correios.Net.Exceptions.InvalidArgumentException`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/Exceptions/InvalidArgumentException.cs)
 
 
