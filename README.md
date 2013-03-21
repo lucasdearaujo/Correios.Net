@@ -20,7 +20,6 @@ Veja abaixo um simple exemplo aonde obtemos o endereço do cep 87710-000 chamand
 Esse endereço é retornado como um objeto Address, para facilitar o uso das informações.
 
 ```c#
-
 public void buscaCep(string cep)
 {
    Correios.Net.Address Address = Correios.Net.BuscaCep.GetAddress(cep);
@@ -29,5 +28,4 @@ public void buscaCep(string cep)
    labelCity.Text   = Address.City;
    labelState.Text  = Address.State;
 }
-
 ```
