@@ -16,16 +16,21 @@ Um dos pontos que levou ao desenvolvimento dessa biblioteca foi o fato de não t
 
 ## Exemplo
 
-Veja abaixo um simple exemplo aonde obtemos o endereço do cep 87710-000 chamando o método estático GetAddress da classe BuscaCep.
+Veja abaixo um simple exemplo aonde obtemos o endereço do cep 87710-130 chamando o método estático GetAddress da classe BuscaCep.
 Esse endereço é retornado como um objeto Address, para facilitar o uso das informações.
 
 ```c#
 public void buscaCep(string cep)
 {
-   Correios.Net.Address Address = Correios.Net.BuscaCep.GetAddress(cep);
+   Correios.Net.Address address = Correios.Net.BuscaCep.GetAddress(cep);
    
-   labelStreet.Text = Address.Street;
-   labelCity.Text   = Address.City;
-   labelState.Text  = Address.State;
+   labelStreet.Text   = address.Street     // Avenida Euclides da Cunha
+   labelDistrict.Text = address.District;  // Jardim São Jorge
+   labelCity.Text     = address.City;      // Paranavaí
+   labelState.Text    = address.State;     // PR
+   labelCep.Text      = address.Cep;       // 87710130
 }
 ```
+
+Não tem problema para estar requisitando CEPs que são os mesmos para a cidade toda. Neste caso o caso Street e Distric irão retornar
+o valor `String.Empty` além `address.CepUnico` estar definido como `true`.
