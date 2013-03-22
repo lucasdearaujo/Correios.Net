@@ -22,7 +22,7 @@ Esse endereço é retornado como um objeto Address, para facilitar o uso das inf
 ```c#
 public void buscaCep(string cep)
 {
-   Correios.Net.Address address = Correios.Net.BuscaCep.GetAddress(cep);
+   Address address = BuscaCep.GetAddress(cep);
    
    labelStreet.Text   = address.Street     // Avenida Euclides da Cunha
    labelDistrict.Text = address.District;  // Jardim São Jorge
