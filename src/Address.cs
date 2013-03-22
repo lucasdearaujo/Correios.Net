@@ -34,6 +34,7 @@ namespace Correios.Net
     {
         private string _Cep;
         private string _Street;
+        private string _District;
         private string _City;
         private string _State;
 
@@ -88,6 +89,28 @@ namespace Correios.Net
                     throw new InvalidArgumentException("O tamanho da rua não pode exceder 500 caracteres.");
 
                 this._Street = value;
+            }
+        }
+
+        /// <summary>
+        /// A validação do distrito verifica apenas se o valor informado
+        /// tem um tamanho de no máximo 500 caracteres.
+        /// </summary>
+        /// 
+        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
+        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+        public String District
+        {
+            get
+            {
+                return this._District;
+            }
+            set
+            {
+                if (value.Length > 500)
+                    throw new InvalidArgumentException("O tamanho do bairro não pode exceder 500 caracteres.");
+
+                this._District = value;
             }
         }
 
@@ -171,5 +194,10 @@ namespace Correios.Net
                     throw new InvalidArgumentException("A sigla da unidade federativa informada é inválida.");
             }
         }
+
+        /// <summary>
+        /// True quando for um cep único para toda a cidade.
+        /// </summary>
+        public Boolean CepUnico { get; set; }
     }
 }

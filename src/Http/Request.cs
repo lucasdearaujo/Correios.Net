@@ -64,7 +64,7 @@ namespace Correios.Net.Http
             request.GetRequestStream()
                 .Write(postBytes, 0, postBytes.Length);
 
-            string responseText = new StreamReader(request.GetResponse().GetResponseStream()).ReadToEnd();
+            string responseText = new StreamReader(request.GetResponse().GetResponseStream(), Encoding.GetEncoding("ISO-8859-1")).ReadToEnd();
 
             return new Response(responseText);
         }

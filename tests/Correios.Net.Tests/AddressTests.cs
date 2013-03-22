@@ -88,7 +88,7 @@ namespace Correios.Net.Tests
         [ExpectedException(typeof(InvalidArgumentException))]
         public void TestSettingInvalidState()
         {
-            this.Address.State = "Lucas";
+            this.Address.State = "WW";
         }
 
         [TestMethod]
