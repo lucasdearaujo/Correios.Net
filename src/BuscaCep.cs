@@ -30,7 +30,7 @@ namespace Correios.Net
     /// 
     /// <see cref="http://volkoinen.github.com/Correios.Net"/>
     /// <see cref="https://github.com/volkoinen/Correios.Net"/>
-    class BuscaCep
+    public class BuscaCep
     {
 
         /// <summary>
