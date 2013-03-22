@@ -37,3 +37,4 @@ o valor `String.Empty` além `address.CepUnico` estar definido como `true`.
 
 Veja o exemplo abaixo:
 ![Exemplo](http://s21.postimg.org/ok60b07dj/example.png)
+![Exemplo](http://s10.postimg.org/v6qvsgs4p/example.png)
