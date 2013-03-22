@@ -34,3 +34,6 @@ public void buscaCep(string cep)
 
 Não tem problema para estar requisitando CEPs que são os mesmos para a cidade toda. Neste caso o caso Street e Distric irão retornar
 o valor `String.Empty` além `address.CepUnico` estar definido como `true`.
+
+Veja o exemplo abaixo:
+[a](http://s21.postimg.org/ok60b07dj/example.png)
