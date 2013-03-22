@@ -21,12 +21,20 @@ namespace Exemplo1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Address address = BuscaCep.GetAddress(textBox5.Text);
+            try
+            {
+                Address address = BuscaCep.GetAddress(textBox5.Text);
 
-            textBox1.Text = address.Street;
-            textBox2.Text = address.District;
-            textBox3.Text = address.City;
-            textBox4.Text = address.State;
+                textBox1.Text = address.Street;
+                textBox2.Text = address.District;
+                textBox3.Text = address.City;
+                textBox4.Text = address.State;
+            }
+            catch (Exception ex)
+            {
+                label1.Text = ex.Message;
+                label1.Visible = true;
+            }
         }
     }
 }

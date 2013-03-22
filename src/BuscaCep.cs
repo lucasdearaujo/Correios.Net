@@ -40,6 +40,9 @@ namespace Correios.Net
         /// <returns>Address</returns>
         public static Address GetAddress(string cep)
         {
+            var address = new Address();
+            address.Cep = cep;
+
             string url = "http://m.correios.com.br/movel/buscaCepConfirma.do";
             string dataToPost = "cepEntrada=" + cep + "&tipoCep=&cepTemp=&metodo=buscarCep";
             string method = "POST";
