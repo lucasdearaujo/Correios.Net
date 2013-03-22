@@ -36,4 +36,4 @@ Não tem problema para estar requisitando CEPs que são os mesmos para a cidade 
 o valor `String.Empty` além `address.CepUnico` estar definido como `true`.
 
 Veja o exemplo abaixo:
-[a](http://s21.postimg.org/ok60b07dj/example.png)
+![Exemplo](http://s21.postimg.org/ok60b07dj/example.png)
