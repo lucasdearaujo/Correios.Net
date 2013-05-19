@@ -1,0 +1,5 @@
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\obj\Release\Correios.Net.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\bin\Release\Correios.Net.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\bin\Release\Correios.Net.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\obj\Release\Correios.Net.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\obj\Release\Correios.Net.pdb

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Correios.Net", "Correios.Net\Correios.Net.csproj", "{062AD1AE-1A46-4F1A-986D-B7A94E5B601B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Correios.Net.Tests", "Correios.Net.Tests\Correios.Net.Tests.csproj", "{2244BE6A-7E31-47F4-BCC5-3CA34D7B9BD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{062AD1AE-1A46-4F1A-986D-B7A94E5B601B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062AD1AE-1A46-4F1A-986D-B7A94E5B601B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062AD1AE-1A46-4F1A-986D-B7A94E5B601B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062AD1AE-1A46-4F1A-986D-B7A94E5B601B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2244BE6A-7E31-47F4-BCC5-3CA34D7B9BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2244BE6A-7E31-47F4-BCC5-3CA34D7B9BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2244BE6A-7E31-47F4-BCC5-3CA34D7B9BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2244BE6A-7E31-47F4-BCC5-3CA34D7B9BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net.Tests\obj\Debug\Correios.Net.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net.Tests\bin\Debug\Correios.Net.Tests.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net.Tests\bin\Debug\Correios.Net.Tests.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net.Tests\bin\Debug\Correios.Net.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net.Tests\bin\Debug\Correios.Net.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net.Tests\obj\Debug\Correios.Net.Tests.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net.Tests\obj\Debug\Correios.Net.Tests.pdb

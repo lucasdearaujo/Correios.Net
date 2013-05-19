@@ -1,0 +1,4 @@
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\bin\Debug\Correios.Net.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\bin\Debug\Correios.Net.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\obj\Debug\Correios.Net.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\Correios.Net\Correios.Net\obj\Debug\Correios.Net.pdb
