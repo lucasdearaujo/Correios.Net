@@ -38,3 +38,7 @@ o valor `String.Empty` além `address.CepUnico` estar definido como `true`.
 Veja o exemplo abaixo:
 ![Exemplo](http://s21.postimg.org/ok60b07dj/example.png)
 ![Exemplo](http://s10.postimg.org/v6qvsgs4p/example.png)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/volkoinen/correios.net/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
