@@ -21,18 +21,18 @@ namespace Correios.Net.Tests
         public void TestSettingInvalidCep()
         {
 
-            this.Address.Cep = "8771013099";
-            this.Address.Cep = "87710--130";
-            this.Address.Cep = String.Empty;
+            this.Address.Zip = "8771013099";
+            this.Address.Zip = "87710--130";
+            this.Address.Zip = String.Empty;
         }
 
         [TestMethod]
         public void TestSettingValidCep()
         {
             string cep = "87710-130";
-            this.Address.Cep = cep;
+            this.Address.Zip = cep;
 
-            Assert.AreEqual(this.Address.Cep, cep);
+            Assert.AreEqual(this.Address.Zip, cep);
         }
 
         [TestMethod]

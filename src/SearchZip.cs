@@ -14,11 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Net;
+using Correios.Net.Http;
 
 namespace Correios.Net
 {
@@ -30,28 +26,25 @@ namespace Correios.Net
     /// 
     /// <see cref="http://volkoinen.github.com/Correios.Net"/>
     /// <see cref="https://github.com/volkoinen/Correios.Net"/>
-    public class BuscaCep
+    public class SearchZip
     {
 
         /// <summary>
         /// Realiza a busca do endereço a partir do cep no site dos correios
         /// </summary>
-        /// <param name="cep">Cep utilizado para busca</param>
+        /// <param name="zip">Cep utilizado para busca</param>
         /// <returns>Address</returns>
-        public static Address GetAddress(string cep)
+        public static Address GetAddress(string zip)
         {
-            var address = new Address();
-            address.Cep = cep;
+            const string url = "http://m.correios.com.br/movel/buscaCepConfirma.do";
+            string dataToPost = "cepEntrada=" + zip + "&tipoCep=&cepTemp=&metodo=buscarCep";
+            const string method = "POST";
+            const string contentType = "application/x-www-form-urlencoded";
 
-            string url = "http://m.correios.com.br/movel/buscaCepConfirma.do";
-            string dataToPost = "cepEntrada=" + cep + "&tipoCep=&cepTemp=&metodo=buscarCep";
-            string method = "POST";
-            string contentType = "application/x-www-form-urlencoded";
+            var request =
+                new Request(url, dataToPost, method, contentType);
 
-            Correios.Net.Http.Request request =
-                new Correios.Net.Http.Request(url, dataToPost, method, contentType);
-
-            Correios.Net.Http.Response response = request.Send();
+            Response response = request.Send();
             return response.ToAddress();
         }
 

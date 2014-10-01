@@ -14,9 +14,6 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Net;
 using System.IO;
@@ -56,7 +53,7 @@ namespace Correios.Net.Http
         /// <returns>Response</returns>
         public Response Send()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(this.Url);
+            var request = (HttpWebRequest)WebRequest.Create(this.Url);
             request.Method = this.Method;
             request.ContentType = this.ContentType;
             byte[] postBytes = Encoding.ASCII.GetBytes(this.DataToSend);

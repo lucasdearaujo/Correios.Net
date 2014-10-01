@@ -15,9 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Correios.Net.Http
@@ -75,16 +72,19 @@ namespace Correios.Net.Http
         /// <returns></returns>
         public Address ToAddress()
         {
-            Address address = new Address();
+            var address = new Address
+            {
+                Street = this.GetValueByTag("Logradouro"),
+                District = this.GetValueByTag("Bairro"),
+                City = Regex.Match(this.GetValueByTag("Localidade"), "^(.*?)   ").Groups[1].Value,
+                State = Regex.Match(this.GetValueByTag("Localidade"), "([A-Z]{2})$").Groups[1].Value,
+                Zip = this.GetValueByTag("CEP")
+            };
 
-            address.Street = this.GetValueByTag("Logradouro");
-            address.District = this.GetValueByTag("Bairro");        
-            address.City = Regex.Match(this.GetValueByTag("Localidade"), "^(.*?)   ").Groups[1].Value;
-            address.State = Regex.Match(this.GetValueByTag("Localidade"), "([A-Z]{2})$").Groups[1].Value;
-            address.Cep = this.GetValueByTag("CEP");
-            
-            if(address.Street == String.Empty)
-                address.CepUnico = true;
+            if (address.Street == String.Empty)
+            {
+                address.UniqueZip = true;
+            }
 
             return address;
         }
