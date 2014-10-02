@@ -85,6 +85,10 @@ namespace Correios.Net.Http
             {
                 address.UniqueZip = true;
             }
+            else if (address.Street.Contains(" -"))
+            {
+                address.Street = address.Street.Substring(0, address.Street.IndexOf(" -"));
+            }
 
             return address;
         }
