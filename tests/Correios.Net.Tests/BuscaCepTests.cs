@@ -21,6 +21,19 @@ namespace Correios.Net.Tests
         }
 
         [TestMethod]
+        public void TestEndereçoComComplemento()
+        {
+            Address address = SearchZip.GetAddress("30112010");
+
+            Assert.AreEqual(address.Zip, "30112010");
+            Assert.AreEqual(address.Street, "Rua Antônio de Albuquerque");
+            Assert.AreEqual(address.District, "Funcionários");
+            Assert.AreEqual(address.City, "Belo Horizonte");
+            Assert.AreEqual(address.State, "MG");
+            Assert.AreEqual(address.UniqueZip, false);
+        }
+
+        [TestMethod]
         public void TestAquisiçãoDoEndereçoUnico()
         {
             Address address = SearchZip.GetAddress("17180000");
@@ -31,6 +44,19 @@ namespace Correios.Net.Tests
             Assert.AreEqual(address.City, "Iacanga");
             Assert.AreEqual(address.State, "SP");
             Assert.AreEqual(address.UniqueZip, true);
+        }
+
+        [TestMethod]
+        public void TestCepInvalido()
+        {
+            Address address = SearchZip.GetAddress("00000010");
+
+            Assert.IsNull(address.Zip);
+            Assert.AreEqual(address.Street, "Não encontrado");
+            Assert.IsNull(address.District);
+            Assert.AreEqual(address.City, "Não encontrado");
+            Assert.IsNull(address.State);
+            Assert.AreEqual(address.UniqueZip, false);
         }
     }
 }

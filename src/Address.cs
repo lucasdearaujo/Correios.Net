@@ -176,7 +176,7 @@ namespace Correios.Net
 
                 if (!validState)
                 {
-                    throw new InvalidArgumentException("A sigla da unidade federativa informada é inválida.");
+                    throw new InvalidArgumentException(string.Format("A sigla {0} da unidade federativa informada é inválida.", _state));
                 }
             }
         }

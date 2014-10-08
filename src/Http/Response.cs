@@ -72,6 +72,16 @@ namespace Correios.Net.Http
         /// <returns></returns>
         public Address ToAddress()
         {
+            if (IsInValidResponse())
+            {
+                return new Address
+                {
+                    Street = "Não encontrado",
+                    City = "Não encontrado",
+                    UniqueZip = false
+                };
+            }
+
             var address = new Address
             {
                 Street = this.GetValueByTag("Logradouro"),
@@ -91,6 +101,17 @@ namespace Correios.Net.Http
             }
 
             return address;
+        }
+
+        /// <summary>
+        /// Verifica se retornou algum erro
+        /// </summary>
+        /// <returns>
+        /// True caso tenha recebido uma mensagem de erro
+        /// </returns>
+        private bool IsInValidResponse()
+        {
+            return this.Text.Contains("<div class=\"erro\">");
         }
     }
 }
