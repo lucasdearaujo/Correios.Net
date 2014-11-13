@@ -31,7 +31,7 @@ namespace Correios.Net.Tests.Http
             string method = "POST";
 
             this.Request = new Correios.Net.Http.Request(url, dataToSend, method, String.Empty);
-            Response response = this.Request.Send();
+            Response response = this.Request.Send(10000);
 
             Assert.AreEqual(response.Text, "teste");
         }

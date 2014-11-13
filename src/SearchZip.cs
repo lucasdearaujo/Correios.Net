@@ -33,8 +33,9 @@ namespace Correios.Net
         /// Realiza a busca do endereço a partir do cep no site dos correios
         /// </summary>
         /// <param name="zip">Cep utilizado para busca</param>
-        /// <returns>Address</returns>
-        public static Address GetAddress(string zip)
+        /// <param name="timeout">Timeout em milisegundos.</param>
+        /// <returns> Address </returns>
+        public static Address GetAddress(string zip, int timeout = 10000)
         {
             const string url = "http://m.correios.com.br/movel/buscaCepConfirma.do";
             string dataToPost = "cepEntrada=" + zip + "&tipoCep=&cepTemp=&metodo=buscarCep";
@@ -44,7 +45,7 @@ namespace Correios.Net
             var request =
                 new Request(url, dataToPost, method, contentType);
 
-            Response response = request.Send();
+            Response response = request.Send(timeout);
             return response.ToAddress();
         }
 

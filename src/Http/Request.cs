@@ -49,11 +49,12 @@ namespace Correios.Net.Http
         /// passados para o construtor para o servidor e retorna
         /// a resposta recebida.
         /// </summary>
-        /// 
+        /// <param name="timeout">Timeout em milisegundos</param>
         /// <returns>Response</returns>
-        public Response Send()
+        public Response Send(int timeout)
         {
             var request = (HttpWebRequest)WebRequest.Create(this.Url);
+            request.Timeout = timeout;
             request.Method = this.Method;
             request.ContentType = this.ContentType;
             byte[] postBytes = Encoding.ASCII.GetBytes(this.DataToSend);
