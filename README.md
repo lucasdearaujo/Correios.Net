@@ -13,6 +13,10 @@ Um dos pontos que levou ao desenvolvimento dessa biblioteca foi o fato de não t
 * [`Correios.Net.Http.Response`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/Http/Response.cs)
 * [`Correios.Net.Exceptions.InvalidArgumentException`](https://github.com/volkoinen/Correios.Net/blob/1.0/src/Exceptions/InvalidArgumentException.cs)
 
+## Utilização
+No seu console de instalação de pacotes, rode o comando
+
+	Install-Package Correios.CEP.Net 
 
 ## Exemplo
 

@@ -15,153 +15,135 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 using Correios.Net.Exceptions;
 
 namespace Correios.Net
 {
     /// <summary>
-    /// Modelo de endereço, todos os dados setados nessa classe
-    /// serão submetido as validações como pode ver.
+    ///     Modelo de endereço, todos os dados setados nessa classe
+    ///     serão submetido as validações como pode ver.
     /// </summary>
-    /// 
-    /// <see cref="http://volkoinen.github.com/Correios.Net"/>
-    /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+    /// <see cref="http://volkoinen.github.com/Correios.Net" />
+    /// <see cref="https://github.com/volkoinen/Correios.Net" />
     public class Address
     {
-        private string _Cep;
-        private string _Street;
-        private string _District;
-        private string _City;
-        private string _State;
+        private string _city;
+        private string _district;
+        private string _state;
+        private string _street;
+        private string _zip;
 
         /// <summary>
-        /// A validação para o CEP permite apenas strings de
-        /// oito nove digitos com ou sem máscara, apenas seguindo
-        /// os seguintes padroes: 99999999 ou 99999-999.
+        ///     A validação para o CEP permite apenas strings de
+        ///     oito nove digitos com ou sem máscara, apenas seguindo
+        ///     os seguintes padroes: 99999999 ou 99999-999.
         /// </summary>
-        /// 
-        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
-        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
-        public String Cep
+        /// <see cref="http://volkoinen.github.com/Correios.Net" />
+        /// <see cref="https://github.com/volkoinen/Correios.Net" />
+        public String Zip
         {
-            get
-            {
-                return this._Cep;
-            }
+            get { return _zip; }
             set
             {
-                int count = 0;
-
                 if (value.Length != 8 && value.Length != 9)
+                {
                     throw new InvalidArgumentException("O CEP informado é inválido.");
+                }
 
-                foreach (char c in value)
-                    if (Char.IsDigit(c))
-                        count++;
+                int count = value.Count(Char.IsDigit);
 
-                if(count != 8)
+                if (count != 8)
+                {
                     throw new InvalidArgumentException("O CEP informado é inválido.");
+                }
 
-                this._Cep = value;
+                _zip = value;
             }
         }
 
         /// <summary>
-        /// A validação do endereço verifica apenas se o mesmo
-        /// tem um número de caracteres maior do que 500.
+        ///     A validação do endereço verifica apenas se o mesmo
+        ///     tem um número de caracteres maior do que 500.
         /// </summary>
-        /// 
-        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
-        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+        /// <see cref="http://volkoinen.github.com/Correios.Net" />
+        /// <see cref="https://github.com/volkoinen/Correios.Net" />
         public String Street
         {
-            get
-            {
-                return this._Street;
-            }
+            get { return _street; }
             set
             {
                 if (value.Length > 500)
+                {
                     throw new InvalidArgumentException("O tamanho da rua não pode exceder 500 caracteres.");
+                }
 
-                this._Street = value;
+                _street = value;
             }
         }
 
         /// <summary>
-        /// A validação do distrito verifica apenas se o valor informado
-        /// tem um tamanho de no máximo 500 caracteres.
+        ///     A validação do distrito verifica apenas se o valor informado
+        ///     tem um tamanho de no máximo 500 caracteres.
         /// </summary>
-        /// 
-        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
-        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+        /// <see cref="http://volkoinen.github.com/Correios.Net" />
+        /// <see cref="https://github.com/volkoinen/Correios.Net" />
         public String District
         {
-            get
-            {
-                return this._District;
-            }
+            get { return _district; }
             set
             {
                 if (value.Length > 500)
+                {
                     throw new InvalidArgumentException("O tamanho do bairro não pode exceder 500 caracteres.");
+                }
 
-                this._District = value;
+                _district = value;
             }
         }
 
         /// <summary>
-        /// A validação da ciade verifica apenas se o valor informado
-        /// tem um tamanho de no máximo 500 caracteres.
+        ///     A validação da ciade verifica apenas se o valor informado
+        ///     tem um tamanho de no máximo 500 caracteres.
         /// </summary>
-        /// 
-        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
-        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+        /// <see cref="http://volkoinen.github.com/Correios.Net" />
+        /// <see cref="https://github.com/volkoinen/Correios.Net" />
         public String City
         {
-            get
-            {
-                return this._City;
-            }
+            get { return _city; }
             set
             {
                 if (value.Length > 500)
+                {
                     throw new InvalidArgumentException("O tamanho da cidade não pode exceder 500 caracteres.");
+                }
 
-                this._City = value;
+                _city = value;
             }
         }
 
         /// <summary>
-        /// Verifica se o UF informado é
+        ///     Verifica se o UF informado é
         /// </summary>
-        ///
-        /// <see cref="http://volkoinen.github.com/Correios.Net"/>
-        /// <see cref="https://github.com/volkoinen/Correios.Net"/>
+        /// <see cref="http://volkoinen.github.com/Correios.Net" />
+        /// <see cref="https://github.com/volkoinen/Correios.Net" />
         public String State
         {
-            get
-            {
-                return this._State;
-            }
+            get { return _state; }
             set
             {
                 bool validState = false;
 
                 string[] states =
                 {
-                    "AC", 
-                    "AL", 
-                    "AM", 
-                    "AP", 
-                    "BA", 
-                    "CE", 
-                    "DF", 
-                    "ES", 
+                    "AC",
+                    "AL",
+                    "AM",
+                    "AP",
+                    "BA",
+                    "CE",
+                    "DF",
+                    "ES",
                     "GO",
                     "MA",
                     "MG",
@@ -184,20 +166,24 @@ namespace Correios.Net
                 };
 
                 foreach (string state in states)
+                {
                     if (value.ToUpper() == state)
                     {
                         validState = true;
-                        this._State = value.ToUpper();
+                        _state = value.ToUpper();
                     }
+                }
 
                 if (!validState)
-                    throw new InvalidArgumentException("A sigla da unidade federativa informada é inválida.");
+                {
+                    throw new InvalidArgumentException(string.Format("A sigla {0} da unidade federativa informada é inválida.", _state));
+                }
             }
         }
 
         /// <summary>
-        /// True quando for um cep único para toda a cidade.
+        ///     True quando for um cep único para toda a cidade.
         /// </summary>
-        public Boolean CepUnico { get; set; }
+        public Boolean UniqueZip { get; set; }
     }
 }
